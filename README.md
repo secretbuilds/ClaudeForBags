@@ -1,17 +1,74 @@
-# ClaudeForBags
+# Bags API Skill for Claude Code
 
-Made by SecretStock (Find me in Bags Discord Dev channel)
+A Claude Code skill that enables Claude to build Solana applications using the [Bags API](https://bags.fm).
 
-Claude Code Skills to build better using BagsAPI
+## What This Is
 
-Add this file to your Claude Code as a Claude Skill
+This is **not** documentation for humans. This is a knowledge package for Claude (the AI) to use when helping you build with the Bags API. Upload this skill to your Claude Code IDE, and Claude will know how to:
 
-Claude Code is an IDE extension, or Terminal tool using Anthropic's Claude. It is an augement to a default IDE like Cursor, VS Code; and especailly more robust than Web based IDEs like Loveable, Bolt etc. 
-Adding skills.md files to your source files in Claude Code will enable claude to do 2 things
+- Launch Solana tokens programmatically
+- Configure fee sharing among multiple wallets
+- Build launchpad platforms that earn partner fees
+- Execute token swaps via API
+- Claim accumulated trading fees
 
-1. Achieve consistency; every task that you need done, the same way every time, define the skills and tell Claude; especially useful for debugging
-2. Teach new skills; don't let Claude waste time (and tokens) trying to "figure out" how to use an API or how to do anything at all, especially working with BagsAPI; just teach it in a file it can easily reference everytime, without fail.
+## Installation
 
-Adding the BagsAPI skill will hopefully resolve alot of the issues, and questions you have, as your AI builder will know the capacity, the methods, and implications of using BagsAPI. 
+### Claude Code (Desktop)
 
-Lets 100x these tokens :) Send me some of your token if this was helpful in your build; will hold
+1. Download or clone this repository
+2. In Claude Code, go to Settings → Skills
+3. Click "Add Skill" and select the `bags-api` folder
+
+### Claude.ai Projects
+
+1. Download the skill folder
+2. Upload the entire folder to your Claude Project
+
+## Usage
+
+Once installed, just ask Claude to help you build with Bags:
+
+> "Help me launch a token with 50% of fees going to my treasury wallet"
+
+> "Create a launchpad platform that earns 25% from every token launch"
+
+> "Build a script to claim all my accumulated fees"
+
+Claude will reference the skill automatically and generate correct, working code.
+
+## Contents
+
+```
+bags-api/
+├── SKILL.md                    # Main instructions for Claude
+├── references/
+│   ├── sdk-methods.md          # All SDK method signatures
+│   ├── fee-sharing.md          # Fee share v2 constraints and patterns
+│   ├── api-endpoints.md        # Raw API reference
+│   └── patterns.md             # Strategic patterns (launchpad, buyback, etc.)
+└── scripts/
+    ├── launch-token.ts         # Basic token launch
+    ├── launch-with-fee-share.ts # Launch with fee splitting
+    ├── create-partner-key.ts   # Partner key creation
+    ├── claim-fees.ts           # Fee claiming
+    └── trade-tokens.ts         # Token trading
+```
+
+## Requirements
+
+For the generated code to run, you'll need:
+
+- Node.js 18+
+- Bags API key from [dev.bags.fm](https://dev.bags.fm)
+- Solana wallet with SOL for transactions
+
+## Links
+
+- [Bags API Documentation](https://docs.bags.fm)
+- [Bags Developer Portal](https://dev.bags.fm)
+- [Bags Platform](https://bags.fm)
+
+## License
+
+MIT
